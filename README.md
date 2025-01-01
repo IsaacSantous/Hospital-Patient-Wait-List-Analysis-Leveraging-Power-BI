@@ -25,20 +25,20 @@ I created two pages in Power BI:
 -	A detailed/Granular page
 ## Summary page
 This contains:
-- 1.	Total waitlist comparison
+1.	Total waitlist comparison
 I used a card that shows the total current month's waitlist vs the total previous month's waitlist. I created a new metric to make this field dynamic. I used DAX and created new measures:
 -	Last Month Waitlist = CALCULATE(SUM(All_Data[Total]),All_Data[Archive_Date] = MAX(All_Data[Archive_Date])) + 0
 -	PY Latest Month Waitlist = CALCULATE(SUM(All_Data[Total]),All_Data[Archive_Date] = EDATE(MAX(All_Data[Archive_Date]), -12)) + 0
-- 2.	Average vs. Median Toggle buttons
+2.	Average vs. Median Toggle buttons
 There were outliers in the data, so the average alone is not enough to provide insights, we need the median. I created two slicers (Average and Median) and two new DAX measures for the Average Waiting List and Median Waiting List as shown below:
 Average Waitlist = AVERAGE(All_Data[Total])
 Median Waitlist = Median(All_Data[Total])
 We need one more measure to help us interact with the slicer buttons:
 Avg/Med Waitlist = SWITCH(VALUES('Calculation Method'[Calc Method]), "Average", [Average Waitlist], "Median", [Median Waitlist])
-- 3.	Donut chart that provides insight on case type split and the overall by average or median
-- 4.	Stacked column chart to show the relationship between the Time Band and each Age profile
-- 5.  Create a Top 5 speciality list using a multi-row card, based on Avg/Med waitlist
-- 6. Created separate visuals for waiting list trends for inpatients/case day vs. outpatients
+3.	Donut chart that provides insight on case type split and the overall by average or median
+4.	Stacked column chart to show the relationship between the Time Band and each Age profile
+5.  Create a Top 5 speciality list using a multi-row card, based on Avg/Med waitlist
+6. Created separate visuals for waiting list trends for inpatients/case day vs. outpatients
 ## Detailed page
 I created a matrix of the total patient wait list using Case_Type, Age_Profile, Time_Band, Specialty, and Archive_Date.
 ## Sharing the Insights
