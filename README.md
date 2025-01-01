@@ -1,7 +1,7 @@
 ![images](https://github.com/user-attachments/assets/98075f6a-8f92-45e6-9494-6afa31b93fbf)
 
 ## Introduction
-Ensuring the efficient management of patients waiting is crucial for any healthcare practice. It's a well-known frustration when you must stay at the hospital for minutes or even hours to see a doctor or specialist. Every year, millions of patients are placed on waitlists. A hospital waitlist is a list of patients who are awaiting treatment or admission to the hospital. Several reasons are responsible for this including a lack of beds, the absence of a specialist, a surgical procedure, etc.
+Ensuring the efficient management of patients waiting is crucial for any healthcare practice. It's a well-known frustration when you must stay at the hospital for minutes or even hours to see a doctor or specialist. Every year, millions of patients are placed on waitlists. A hospital waitlist is a list of patients who are awaiting treatment or admission to the hospital. Several reasons are responsible for this including the lack of beds, absence of a specialist, surgical procedure, etc.
 My job is to analyse the healthcare dataset for three patient groups. This will provide insights into how the waitlist varies between specialities, patient types, and age groups.
 ## Problem Statement
 The hospital management is worried about the massive number of patients waiting for medical services. The stakeholders seek to understand how the waitlist varies. As a Data Scientist, I aim to analyse the given healthcare dataset and provide information and insights for efficient management of patients waiting at the hospital.
