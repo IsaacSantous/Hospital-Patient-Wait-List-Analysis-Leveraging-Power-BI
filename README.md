@@ -1,8 +1,7 @@
 ![images](https://github.com/user-attachments/assets/98075f6a-8f92-45e6-9494-6afa31b93fbf)
 
 ## Introduction
-Ensuring the efficient management of patients waiting is crucial for any healthcare practice. It's a well-known frustration when you must stay at the hospital for minutes or even hours to see a doctor or specialist. Every year, millions of patients are placed on waitlists.
-A hospital waitlist is a list of patients who are awaiting treatment or admission to the hospital. Several reasons are responsible for this including a lack of beds, the absence of a specialist, a surgical procedure, etc.
+Ensuring the efficient management of patients waiting is crucial for any healthcare practice. It's a well-known frustration when you must stay at the hospital for minutes or even hours to see a doctor or specialist. Every year, millions of patients are placed on waitlists. A hospital waitlist is a list of patients who are awaiting treatment or admission to the hospital. Several reasons are responsible for this including a lack of beds, the absence of a specialist, a surgical procedure, etc.
 My job is to analyse the healthcare dataset for three patient groups. This will provide insights into how the waitlist varies between specialities, patient types, and age groups.
 ## Problem Statement
 The hospital management is worried about the massive number of patients waiting for medical services. The stakeholders seek to understand how the waitlist varies. As a Data Scientist, I aim to analyse the given healthcare dataset and provide information and insights for efficient management of patients waiting at the hospital.
@@ -13,14 +12,14 @@ The hospital management is worried about the massive number of patients waiting 
 Metrics Required
 -	The average and median waitlist.
 -	The current total waitlist.
-## Data Collection and Scop
+## Data collection and scop
 The management provided the dataset. The file contains 4 CSV tables for Inpatient and Outpatient respectively. The Inpatient data was further categorized into Inpatients or Day Cases. The scope of the data was from January 2018 to March 2021.
-## Data Transformation and Modelling
+## Data transformation and modelling
 After a thorough check of the datasets, the rows are the same for both Inpatient and Outpatient tables. Also, the column headings are almost the same except for one incomplete nomenclature and one missed column due to the nature of the dataset – which I fixed before appending the two tables using Power BI. The new table was renamed, and the two tables (Inpatient and Outpatient) were hidden.
 The speciality mapping CSV file was imported and promoted column headers. I created a relationship between the new table and the mapping speciality table.
 ## Data visualization blueprint
 A discussion was held on how the dashboard will look. A sketch of the dashboard was done. 
-### Data Analysis
+## Data Analysis
 I created two pages in Power BI: 
 -	A summary page
 -	A detailed/Granular page
@@ -36,10 +35,10 @@ Average Waitlist = AVERAGE(All_Data[Total])
 Median Waitlist = Median(All_Data[Total])
 We need one more measure to help us interact with the slicer buttons:
 Avg/Med Waitlist = SWITCH(VALUES('Calculation Method'[Calc Method]), "Average", [Average Waitlist], "Median", [Median Waitlist])
-3.	Donut chart that provides insight on case type split and the overall by average or median
-4.	Stacked column chart to show the relationship between the Time Band and each Age profile
-5.  Create a Top 5 speciality list using a multi-row card, based on Avg/Med waitlist
-6. Created separate visuals for waiting list trends for inpatients/case day vs. outpatients
+### 3.	Donut chart that provides insight on case type split and the overall by average or median
+### 4.	Stacked column chart to show the relationship between the Time Band and each Age profile
+### 5.  Create a Top 5 speciality list using a multi-row card, based on Avg/Med waitlist
+### 6. Created separate visuals for waiting list trends for inpatients/case day vs. outpatients
 ## Detailed page
 I created a matrix of the total patient wait list using Case_Type, Age_Profile, Time_Band, Specialty, and Archive_Date.
 ## Sharing the Insights
@@ -50,5 +49,5 @@ I created a matrix of the total patient wait list using Case_Type, Age_Profile, 
 -	The waitlist for Inpatients and Day Cases has remained steady over the past few years, however, a minimal crease was observed for the day cases around March 2020.
 -	Compared with the number of inpatients and day cases, the number of Outpatients waitlist continued to steadily increase over the same period.
 -	The top 5 specialties based on the median waitlist are: Accident & Emergency, Dermatology, Clinical Genetics, Cardiology, and Pain Relief.
-## 5. Recommendation
+## Recommendation
 The hospital management and stakeholders should prioritise the top five specialities. This might include hiring more health workforce and procuring equipment including beds to expedite operations. 
